@@ -1,5 +1,6 @@
+import { alfabet } from "@/constants/alfabet"
+
 export function findMissingLetter(array:string[]):string {
-  const alfabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
   const lowIndex = alfabet.indexOf(array[0])
   const highIndex = alfabet.indexOf(array[array.length - 1])
 
@@ -10,5 +11,5 @@ export function findMissingLetter(array:string[]):string {
     return false
   })
 
-  return result.join('')
+  return result.join(' ')
 }
